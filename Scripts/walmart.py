@@ -20,3 +20,18 @@ options.add_argument("--log-level=3")
 options.add_argument("--disable-extensions")
 options.add_argument("test-type")
 options.add_argument('--disable-blink-features=AutomationControlled')
+
+
+
+
+class walmart:
+    def __init__(self,email,password,link):
+        self.email = input('Email:')
+        self.password = input('Password:')
+        self.link = input('Product Link:')
+        self.bot = bot(options=options)
+
+
+
+
+        
