@@ -36,13 +36,15 @@ class bestbuy:
         WebDriverWait(bot, 10).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[1]/main/div/div[2]/div[1]/div/div[1]/div[1]/section[2]/div/div/div[3]/div/div[1]/button'))).click()
         time.sleep(1)
         print(':: Logging in ::')
-        email = bot.find_element_by_id('fld-e')
+        email = WebDriverWait(bot, 10).until(EC.element_to_be_clickable((By.ID, 'fld-e')))
         email.send_keys(self.email)
         password = bot.find_element_by_id('fld-p1')
         password.send_keys(self.password)
         WebDriverWait(bot, 10).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[1]/div/section/main/div[2]/div[1]/div/div/div/div/form/div[3]/button'))).click()
+        WebDriverWait(bot, 10).until(EC.element_to_be_clickable((By.CLASS_NAME, 'ispu-card__switch'))).click()
         WebDriverWait(bot, 10).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[1]/div[2]/div/div[2]/div[1]/div[1]/main/div[2]/div[2]/form/section/div/div[2]/div/div/button'))).click()
-
+        WebDriverWait(bot, 10).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[1]/div[2]/div/div[2]/div[1]/div[1]/main/div[2]/div[3]/div/section/div[4]/button'))).click()
+        print(':: Item Bought ::')
 
 
     def function1(self,targeturl):
