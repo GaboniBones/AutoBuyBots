@@ -46,7 +46,6 @@ class bestbuy:
         WebDriverWait(bot, 10).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[1]/div[2]/div/div[2]/div[1]/div[1]/main/div[2]/div[3]/div/section/div[4]/button'))).click()
         print(':: Item Bought ::')
 
-
     def function1(self,targeturl):
         bot = self.bot
         bot.get(targeturl)

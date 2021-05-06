@@ -23,7 +23,9 @@ class ps5Bot:
         self.link = input("Link to product:")
         self.bot = webdriver.Chrome(options=options)
 
-    def buy(self):
+
+    
+    def buy(self): 
         bot = self.bot
         print(":: Buying ::")
         buy = bot.find_element_by_id("buy-now-button")
