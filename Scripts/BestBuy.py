@@ -10,7 +10,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 options = Options()
-options.headless = False
+options.headless = True
 LOGGER.setLevel(logging.WARNING)
 urllibLogger.setLevel(logging.WARNING)
 
