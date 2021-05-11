@@ -8,6 +8,7 @@ import time
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from getpass import getpass
 
 options = Options()
 options.headless = True
@@ -22,8 +23,8 @@ options.add_argument('--disable-blink-features=AutomationControlled')
 
 class bestbuy:
     def __init__(self, email, password, link):
-        self.email = input("Email:")
-        self.password = input("Password:")
+        self.email = getpass("Email:")
+        self.password = getpass("Password:")
         self.link =  input("Link:")
         self.bot = webdriver.Chrome(options=options)
 

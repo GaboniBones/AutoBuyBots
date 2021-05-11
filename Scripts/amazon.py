@@ -4,6 +4,7 @@ import logging
 from selenium.webdriver.remote.remote_connection import LOGGER
 from urllib3.connectionpool import log as urllibLogger
 import time
+from getpass import getpass
 
 options = Options()
 options.headless = True
