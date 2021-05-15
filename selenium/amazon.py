@@ -4,7 +4,7 @@ import logging
 from selenium.webdriver.remote.remote_connection import LOGGER
 from urllib3.connectionpool import log as urllibLogger
 import time
-from getpass import getpass
+from getpass import getpass 
 
 options = Options()
 options.headless = True
@@ -19,8 +19,8 @@ options.add_argument('--disable-blink-features=AutomationControlled')
 
 class ps5Bot:
     def __init__(self, username, password, link):
-        self.username = input("Enter Email:")
-        self.password = input("Enter Password:")
+        self.username = getpass("Enter Email:")
+        self.password = getpass("Enter Password:")
         self.link = input("Link to product:")
         self.bot = webdriver.Chrome(options=options)
 
